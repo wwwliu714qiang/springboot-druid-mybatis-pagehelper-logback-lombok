@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.chiy.dualpolarization.dao.UserMapper">
+
+    <!-- 查找全部 -->
+    <select id="findAll" resultType="com.chiy.dualpolarization.model.User">
+        select user_id as userId,user_name as userName,password,phone
+        from dual_user
+    </select>
+
+    <!-- 查找全部 -->
+    <select id="selectAll" resultType="com.chiy.dualpolarization.model.User">
+        select user_id as userId,user_name as userName,password,phone
+        from dual_user_lq
+    </select>
+</mapper>
